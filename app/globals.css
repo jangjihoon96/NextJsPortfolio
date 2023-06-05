@@ -1,3 +1,17 @@
+:root {
+  --container-width: 90rem;
+  --black: #191919;
+  --dark: #555555;
+  --white: #ffffff;
+  --text-xxxsm: 0.75rem;
+  --text-xxsm: 0.875rem;
+  --text-xsm: 1rem;
+  --text-sm: 1.125rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5rem;
+  --text-xlg: 2rem;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -127,6 +141,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 @font-face {
