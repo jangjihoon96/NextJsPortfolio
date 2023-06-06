@@ -36,6 +36,7 @@ export default function Header() {
 const StyledHeader = styled.header`
   width: 100%;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
