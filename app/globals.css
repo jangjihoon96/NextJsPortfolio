@@ -1,7 +1,9 @@
 :root {
   --container-width: 90rem;
   --black: #191919;
-  --dark: #555555;
+  --dark: #393939;
+  --gray: #9a9a9a;
+  --lightgray: #eaeaea;
   --white: #ffffff;
   --text-xxxsm: 0.75rem;
   --text-xxsm: 0.875rem;
