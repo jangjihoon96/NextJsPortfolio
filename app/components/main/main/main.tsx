@@ -67,7 +67,7 @@ const StyledMain = styled.main`
 const StyledMainText = styled.div`
   position: absolute;
   top: 10.75rem;
-  left: 12.5rem;
+  left: 11.75rem;
   h2 {
     font-size: 5rem;
     font-weight: 600;
@@ -128,7 +128,7 @@ const StyledMainImage = styled.div`
   border-radius: 50%;
   background-color: #191919;
   top: 172px;
-  right: 12.5rem;
+  right: 72px;
 `;
 
 const StyledSnsList = styled.ul`
@@ -137,5 +137,11 @@ const StyledSnsList = styled.ul`
   left: 0;
   li + li {
     margin-top: 30px;
+  }
+  a {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
