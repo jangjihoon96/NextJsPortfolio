@@ -1,6 +1,6 @@
-"use client";
 import styled from "styled-components";
 import Image from "next/image";
+import ScrollAni from "./scrollAni";
 export default function Main() {
   const snsList = [
     {
@@ -29,7 +29,7 @@ export default function Main() {
           J.Jihoon<span>🐈</span>
         </h2>
         <strong>
-          <span>Frontend Develop</span>
+          <span>Frontend Developer</span>
         </strong>
         <p>
           I&apos;m creative designer based in New York, and I&apos;m very
@@ -54,6 +54,10 @@ export default function Main() {
           );
         })}
       </StyledSnsList>
+      <StyledScrollDown>
+        <ScrollAni />
+        <span className="text">Scroll down &darr;</span>
+      </StyledScrollDown>
     </StyledMain>
   );
 }
@@ -133,15 +137,30 @@ const StyledMainImage = styled.div`
 
 const StyledSnsList = styled.ul`
   position: absolute;
-  top: 280px;
+  top: 17.5rem;
   left: 0;
   li + li {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
   a {
     opacity: 0.5;
     &:hover {
       opacity: 1;
     }
+  }
+`;
+
+const StyledScrollDown = styled.div`
+  position: absolute;
+  top: 45rem;
+  left: 11.75rem;
+  display: flex;
+  align-items: center;
+  .text {
+    margin-left: 1.125rem;
+    font-weight: 500;
+    font-size: var(--text-md);
+    letter-spacing: 0.1875rem;
+    color: var(--dark);
   }
 `;
