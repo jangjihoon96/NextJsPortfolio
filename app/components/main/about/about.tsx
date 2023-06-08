@@ -5,7 +5,7 @@ import AboutList from "./aboutList";
 import DownloadButton from "./downloadButton";
 export default function About() {
   return (
-    <div>
+    <section>
       <Title>About Me</Title>
       <Description>My introduction</Description>
       <StyledAboutContainer>
@@ -20,11 +20,11 @@ export default function About() {
           <DownloadButton>Download CV</DownloadButton>
         </StyledAboutContents>
       </StyledAboutContainer>
-    </div>
+    </section>
   );
 }
 
-const StyledAboutContainer = styled.section`
+const StyledAboutContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
