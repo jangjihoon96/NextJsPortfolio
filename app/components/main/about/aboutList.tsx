@@ -1,20 +1,28 @@
 import styled from "styled-components";
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AboutList() {
   return (
     <StyledList>
       <li>
-        <span className="icon">icon</span>
+        <span className="icon">
+          <FontAwesomeIcon icon={faPaw} className="icon" />
+        </span>
         <span className="title">Experience</span>
         <span className="desc">8 + Years</span>
       </li>
       <li>
-        <span className="icon">icon</span>
+        <span className="icon">
+          <FontAwesomeIcon icon={faPaw} className="icon" />
+        </span>
         <span className="title">Completed</span>
         <span className="desc">8 + Projects</span>
       </li>
       <li>
-        <span className="icon">icon</span>
+        <span className="icon">
+          <FontAwesomeIcon icon={faPaw} className="icon" />
+        </span>
         <span className="title">Support</span>
         <span className="desc">Online 24/7</span>
       </li>

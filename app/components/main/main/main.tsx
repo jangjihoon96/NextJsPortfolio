@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 import ScrollAni from "./scrollAni";
+import BigButton from "../bigButton";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Main() {
   const snsList = [
     {
@@ -35,7 +38,9 @@ export default function Main() {
           I&apos;m creative designer based in New York, and I&apos;m very
           passionate and dedicated to my work
         </p>
-        <button>Say Hello</button>
+        <BigButton>
+          Say Hello <FontAwesomeIcon icon={faPaperPlane} className="icon" />
+        </BigButton>
       </StyledMainText>
       <StyledMainImage>이미지 들어갈 장소</StyledMainImage>
       <StyledSnsList>
@@ -65,7 +70,6 @@ export default function Main() {
 const StyledMain = styled.main`
   width: 100%;
   height: 60.5rem;
-  /* background-color: red; */
   position: relative;
 `;
 const StyledMainText = styled.div`
@@ -106,22 +110,6 @@ const StyledMainText = styled.div`
     width: 33.75rem;
     line-height: 1.5;
     color: var(--gray);
-  }
-  button {
-    width: 15.625rem;
-    height: 5.625rem;
-    margin-top: 4.25rem;
-    border: none;
-    background-color: var(--black);
-    font-size: var(--text-lg);
-    color: var(--white);
-    border-radius: 1.5rem;
-    cursor: pointer;
-    &:hover {
-      border: 2px solid var(--dark);
-      background-color: var(--white);
-      color: var(--dark);
-    }
   }
 `;
 

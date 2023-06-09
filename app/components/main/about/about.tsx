@@ -2,7 +2,10 @@ import styled from "styled-components";
 import Description from "../../text/description";
 import Title from "../../text/title";
 import AboutList from "./aboutList";
-import DownloadButton from "./downloadButton";
+import BigButton from "../bigButton";
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function About() {
   return (
     <section>
@@ -17,7 +20,9 @@ export default function About() {
             I have years of experience and many clients are happy with the
             projects carried out.
           </p>
-          <DownloadButton>Download CV</DownloadButton>
+          <BigButton>
+            Download CV <FontAwesomeIcon icon={faPaperclip} className="icon" />
+          </BigButton>
         </StyledAboutContents>
       </StyledAboutContainer>
     </section>
@@ -28,7 +33,6 @@ const StyledAboutContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  margin-top: 5rem;
 `;
 
 const StyledAboutImage = styled.div`
