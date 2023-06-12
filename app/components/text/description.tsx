@@ -6,6 +6,7 @@ export default function Description({ children }: { children: string }) {
 
 const StyledDescription = styled.p`
   margin-top: 1.25rem;
+  margin-bottom: 4rem;
   font-size: var(--text-md);
   font-weight: 400;
   color: var(--gray);

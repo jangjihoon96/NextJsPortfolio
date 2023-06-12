@@ -69,7 +69,6 @@ const StyledCurriculum = styled.div`
   position: relative;
   width: 31.25rem;
   margin: 0 auto;
-  /* background-color: red; */
   ul {
     margin-top: 4.5rem;
   }
@@ -77,6 +76,7 @@ const StyledCurriculum = styled.div`
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    max-width: 13.25rem;
     min-height: 7rem;
     strong {
       font-weight: 500;
