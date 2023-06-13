@@ -32,11 +32,11 @@ export const portfolioData: PortfolioDataType[] = [
   },
 ];
 
-type PortfolioFilterType = { id: number; name: string };
+export type PortfolioFilterType = { id: number; name: string };
 
 export const portfolioFilter: PortfolioFilterType[] = [
   { id: 1, name: "all" },
-  { id: 1, name: "team " },
-  { id: 1, name: "alone" },
-  { id: 1, name: "toy" },
+  { id: 2, name: "team" },
+  { id: 3, name: "individual" },
+  { id: 4, name: "toy" },
 ];
