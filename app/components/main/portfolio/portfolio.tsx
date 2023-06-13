@@ -16,7 +16,6 @@ export default function Portfolio() {
 
   const handleFilterChange = (filterName: string) => {
     setActiveFilter(filterName);
-    console.log(activeFilter);
   };
   return (
     <section>
