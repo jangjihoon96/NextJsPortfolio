@@ -18,7 +18,7 @@ export const portfolioData: PortfolioDataType[] = [
     desc: "React로 개발한 인터렉티브 웹사이트 입니다.",
     github: "https://github.com/likelion4th-React-LAB15/final-project",
     demo: "https://likelion4th-react-lab15.github.io/final-project/",
-    cartagorize: "Team",
+    cartagorize: "team", // "team", "individual" , "toy"
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const portfolioData: PortfolioDataType[] = [
     desc: "마켓컬리 클론이며, Vanilla JS로 개발한 웹사이트 입니다.",
     github: "https://github.com/Dev5ps/market-karly",
     demo: "",
-    cartagorize: "Team",
+    cartagorize: "team", // "team", "individual" , "toy"
   },
 ];
 
