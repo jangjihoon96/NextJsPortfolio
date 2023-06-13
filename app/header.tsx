@@ -19,7 +19,7 @@ export default function Header() {
             <a href="#">Skills</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#">Qualification</a>
           </li>
           <li>
             <a href="#">Portfolio</a>
@@ -40,7 +40,7 @@ const StyledHeader = styled.header`
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #fff;
+  background-color: var(--bgColor);
   .inner {
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@ const StyledHeader = styled.header`
   }
   h1 {
     flex-grow: 1;
-    font-size: 1.25rem;
+    font-size: var(--text-sm);
   }
   ul.gnb {
     display: flex;
@@ -59,7 +59,7 @@ const StyledHeader = styled.header`
     padding-left: 3.125rem;
   }
   ul.gnb a {
-    font-size: 1.25rem;
+    font-size: var(--text-sm);
     color: #555;
   }
   ul.gnb a:hover {
