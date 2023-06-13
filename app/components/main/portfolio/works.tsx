@@ -17,7 +17,7 @@ export default function Works({
             <li key={item.id}>
               <Image
                 src={`/images/works/${item.img}`}
-                alt="asd"
+                alt={item.alt}
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -43,7 +43,7 @@ export default function Works({
             <li key={item.id}>
               <Image
                 src={`/images/works/${item.img}`}
-                alt="asd"
+                alt={item.alt}
                 width={0}
                 height={0}
                 sizes="100vw"
