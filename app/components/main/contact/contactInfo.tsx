@@ -1,9 +1,35 @@
+"use client";
+
 import styled from "styled-components";
 import ContactSubTitle from "./contactSubTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { contactData } from "./data";
+import { useEffect } from "react";
+import { gsap } from "gsap";
 
 export default function ContactInfo() {
+  useEffect(() => {
+    const contactText = document.querySelectorAll(".contactLink");
+    contactText.forEach((text) => {
+      let hoverAnimation = gsap.timeline({ paused: true });
+      hoverAnimation.to(text, {
+        color: "var(--dark)",
+        letterSpacing: "1px",
+        duration: 0.3,
+      });
+      hoverAnimation.to(
+        text.querySelector(".rightarrow"),
+        {
+          x: 4,
+          duration: 0.3,
+        },
+        0
+      );
+      text.addEventListener("mouseenter", () => hoverAnimation.play());
+      text.addEventListener("mouseleave", () => hoverAnimation.reverse());
+    });
+  }, []);
+
   return (
     <StyledContactInfoContents>
       <ContactSubTitle>Talk to me</ContactSubTitle>
