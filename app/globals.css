@@ -5,6 +5,7 @@
   --gray: #9a9a9a;
   --lightgray: #eaeaea;
   --white: #ffffff;
+  --bgColor: #fafafa;
   --text-xxxsm: 0.75rem;
   --text-xxsm: 0.875rem;
   --text-xsm: 1rem;
@@ -12,6 +13,8 @@
   --text-md: 1.25rem;
   --text-lg: 1.5rem;
   --text-xlg: 2rem;
+  --text-xxlg: 2.25rem;
+  --text-xxxlg: 3rem;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -122,8 +125,13 @@ section {
   display: block;
 }
 body {
+  background-color: var(--bgColor);
   line-height: 1;
   font-family: "Pretendard", sans-serif;
+}
+textarea {
+  font-family: "Pretendard", sans-serif;
+  resize: none;
 }
 ol,
 ul {
@@ -202,4 +210,21 @@ a {
   font-weight: 900;
   font-style: normal;
   src: url("/fonts/pretendard/Pretendard-Black.ttf") format("truetype");
+}
+
+.a11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+section + section {
+  margin-top: 200px;
 }
