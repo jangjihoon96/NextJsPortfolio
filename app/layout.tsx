@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./header";
+import Footer from "./footer";
 
 export const metadata = {
   title: "Jihoon Jang Portfolio",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
