@@ -6,6 +6,7 @@ import Skills from "./components/main/skills/skills";
 import Portfolio from "./components/main/portfolio/portfolio";
 import Contact from "./components/main/contact/contact";
 import Qualification from "./components/main/qualification/qualification";
+import ScrollTopButton from "./components/button/scrollTopButton";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Qualification />
           <Portfolio />
           <Contact />
+          <ScrollTopButton />
         </StyledContainerInner>
       </StyledContainer>
     </>
