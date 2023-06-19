@@ -5,6 +5,7 @@ import AboutList from "./aboutList";
 import BigButton from "../bigButton";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DownloadButton from "./downloadButton";
 
 export default function About() {
   return (
@@ -20,12 +21,12 @@ export default function About() {
             I have years of experience and many clients are happy with the
             projects carried out.
           </p>
-          <a href="/downloads/resume_jihoon.pdf" download>
-            <BigButton>
-              Download CV{" "}
-              <FontAwesomeIcon icon={faPaperclip} className="icon" />
-            </BigButton>
-          </a>
+          <DownloadButton
+            href="/downloads/resume_jihoon.pdf"
+            download="resume_jihoon_2023"
+          >
+            Download CV <FontAwesomeIcon icon={faPaperclip} className="icon" />
+          </DownloadButton>
         </StyledAboutContents>
       </StyledAboutContainer>
     </section>
