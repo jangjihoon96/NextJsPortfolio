@@ -46,6 +46,8 @@ const StyledAboutImage = styled.div`
   border-radius: 30px;
 `;
 const StyledAboutContents = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
   width: 550px;
   height: 440px;
   p {
