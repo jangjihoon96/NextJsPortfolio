@@ -20,9 +20,12 @@ export default function About() {
             I have years of experience and many clients are happy with the
             projects carried out.
           </p>
-          <BigButton>
-            Download CV <FontAwesomeIcon icon={faPaperclip} className="icon" />
-          </BigButton>
+          <a href="/downloads/resume_jihoon.pdf" download>
+            <BigButton>
+              Download CV{" "}
+              <FontAwesomeIcon icon={faPaperclip} className="icon" />
+            </BigButton>
+          </a>
         </StyledAboutContents>
       </StyledAboutContainer>
     </section>
