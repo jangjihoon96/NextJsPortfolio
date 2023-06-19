@@ -6,7 +6,7 @@ import ContactForm from "./contactForm";
 
 export default function Contact() {
   return (
-    <section>
+    <section id="contact">
       <Title>Contact Me</Title>
       <Description>Get in touch</Description>
       <StyledContactContainer>

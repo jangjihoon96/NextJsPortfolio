@@ -24,7 +24,7 @@ export default function Skills() {
     { id: 11, name: "Firebase", level: "Basic" },
   ];
   return (
-    <section>
+    <section id="skills">
       <Title>Skills</Title>
       <Description>My technical level</Description>
       <StyledSkillsContents>

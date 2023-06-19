@@ -26,7 +26,7 @@ export default function Main() {
     },
   ];
   return (
-    <StyledMain>
+    <StyledMain id="home">
       <StyledMainText>
         <h2>
           J.Jihoon<span>🐈</span>

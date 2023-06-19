@@ -18,7 +18,7 @@ export default function Portfolio() {
     setActiveFilter(filterName);
   };
   return (
-    <section>
+    <section id="portfolio">
       <Title>Portfolio</Title>
       <Description>Most recent work</Description>
       <WorksNav

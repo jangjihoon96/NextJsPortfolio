@@ -7,7 +7,7 @@ import Curriculum from "./curriculum";
 
 export default function Qualification() {
   return (
-    <section>
+    <section id="qualification">
       <Title>Qualification</Title>
       <Description>My personel journey</Description>
       <StyledQualificationContents>

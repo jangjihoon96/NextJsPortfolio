@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function About() {
   return (
-    <section>
+    <section id="about">
       <Title>About Me</Title>
       <Description>My introduction</Description>
       <StyledAboutContainer>
