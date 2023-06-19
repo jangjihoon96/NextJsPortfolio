@@ -4,6 +4,8 @@ import ScrollAni from "./scrollAni";
 import BigButton from "../bigButton";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLayoutEffect } from "react";
+import { Power0, gsap } from "gsap";
 export default function Main() {
   const snsList = [
     {
@@ -25,6 +27,31 @@ export default function Main() {
       href: "https://www.notion.so/Design-Develop-f1f9c340de144a2ca9e2e90cd2b8ef27?pvs=4",
     },
   ];
+  useLayoutEffect(() => {
+    let profileTl = gsap.timeline();
+    profileTl.to("#animationProfile", {
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      keyframes: {
+        "0%": {
+          borderRadius: "60% 30% 70% 30% / 60% 30% 40% 70%",
+          ease: Power0.easeNone,
+        },
+        "50%": {
+          borderRadius: "50%",
+          ease: Power0.easeNone,
+        },
+        "100%": {
+          borderRadius: "30% 60% 30% 70% / 30% 60% 70% 40%",
+          ease: Power0.easeNone,
+        },
+      },
+      stagger: {
+        each: 1,
+      },
+    });
+  }, []);
   return (
     <StyledMain id="home">
       <StyledMainText>
@@ -42,7 +69,16 @@ export default function Main() {
           Say Hello <FontAwesomeIcon icon={faPaperPlane} className="icon" />
         </BigButton>
       </StyledMainText>
-      <StyledMainImage>이미지 들어갈 장소</StyledMainImage>
+      <StyledMainImage id="animationProfile">
+        <Image
+          src="/images/profile/main_profile.jpeg"
+          alt="프로필"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+        ></Image>
+      </StyledMainImage>
       <StyledSnsList>
         {snsList.map((item) => {
           return (
@@ -117,10 +153,13 @@ const StyledMainImage = styled.div`
   position: absolute;
   width: 400px;
   height: 400px;
-  border-radius: 50%;
   background-color: #191919;
+  overflow: hidden;
   top: 172px;
   right: 72px;
+  img {
+    vertical-align: middle;
+  }
 `;
 
 const StyledSnsList = styled.ul`
