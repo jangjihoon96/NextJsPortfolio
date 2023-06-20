@@ -103,9 +103,6 @@ export default function Main() {
   );
 }
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty("--vh", `${vh}px`);
-
 const StyledMain = styled.main`
   width: 100%;
   height: 60.5rem;
@@ -127,10 +124,11 @@ const StyledMain = styled.main`
     padding-bottom: 12.5rem;
   }
   @media screen and (max-width: 540px) {
-    height: 100vh;
-    height: var(--vh, 1vh) * 100;
     padding-bottom: 0;
     margin-bottom: 200px;
+  }
+  @media screen and (max-width: 414px) {
+    height: 100vh;
   }
 `;
 const StyledMainText = styled.div`
@@ -275,7 +273,7 @@ const StyledMainImage = styled.div`
   @media screen and (max-width: 414px) {
     width: 80%;
     height: 15.625rem;
-    margin-top: 1.75rem;
+    margin-top: 3.25rem;
   }
 `;
 
@@ -303,7 +301,7 @@ const StyledSnsList = styled.ul`
     top: 32rem;
   }
   @media screen and (max-width: 414px) {
-    top: 24rem;
+    top: 25rem;
   }
 `;
 
