@@ -21,4 +21,17 @@ const StyledBigButton = styled.button`
   &:hover {
     background-color: var(--black);
   }
+  @media screen and (max-width: 1280px) {
+    padding: 0 3rem;
+    height: 4rem;
+    margin-top: 4.25rem;
+    font-size: var(--text-md);
+    border-radius: 0.75rem;
+  }
+  @media screen and (max-width: 540px) {
+    padding: 0 3rem;
+    height: 3.375rem;
+    margin-top: 3rem;
+    font-size: var(--text-sm);
+  }
 `;
