@@ -86,4 +86,18 @@ const StyledSkillsContents = styled.div`
     font-size: var(--text-sm);
     color: var(--dark);
   }
+  @media screen and (max-width: 1280px) {
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    li {
+      width: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    ul {
+      justify-content: space-between;
+    }
+  }
 `;

@@ -103,15 +103,39 @@ export default function Main() {
   );
 }
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 const StyledMain = styled.main`
   width: 100%;
   height: 60.5rem;
   position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  @media screen and (max-width: 1280px) {
+    height: 54rem;
+    padding: 0 1.5rem;
+  }
+  @media screen and (max-width: 968px) {
+    height: auto;
+    padding: 0 1.5rem;
+    padding-bottom: 21.25rem;
+  }
+  @media screen and (max-width: 768px) {
+    flex-flow: column nowrap;
+    padding-bottom: 12.5rem;
+  }
+  @media screen and (max-width: 540px) {
+    height: 100vh;
+    height: var(--vh, 1vh) * 100;
+    padding-bottom: 0;
+    margin-bottom: 200px;
+  }
 `;
 const StyledMainText = styled.div`
-  position: absolute;
-  top: 10.75rem;
-  left: 11.75rem;
+  padding-top: 10.75rem;
+  padding-left: 11.75rem;
   h2 {
     font-size: 5rem;
     font-weight: 600;
@@ -124,7 +148,6 @@ const StyledMainText = styled.div`
   strong {
     display: flex;
     align-items: center;
-    width: 25rem;
     margin-top: 1.5rem;
     font-weight: 400;
     font-size: var(--text-lg);
@@ -143,22 +166,116 @@ const StyledMainText = styled.div`
     margin-top: 1.5rem;
     font-weight: 300;
     font-size: var(--text-lg);
-    width: 33.75rem;
+    max-width: 33.75rem;
     line-height: 1.5;
     color: var(--gray);
+  }
+  @media screen and (max-width: 1280px) {
+    padding-top: 8rem;
+    padding-left: 10rem;
+    h2 {
+      font-size: 4rem;
+      span {
+        font-size: var(--text-xxlg);
+      }
+    }
+    strong {
+      font-size: var(--text-md);
+    }
+    p {
+      font-size: var(--text-md);
+    }
+  }
+  @media screen and (max-width: 968px) {
+    padding-top: 6rem;
+    padding-left: 7rem;
+    h2 {
+      font-size: 3.2rem;
+      span {
+        font-size: var(--text-xlg);
+      }
+    }
+    strong {
+      font-size: var(--text-sm);
+    }
+    p {
+      font-size: var(--text-sm);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  @media screen and (max-width: 540px) {
+    padding-top: 4rem;
+    padding-left: 5rem;
+    padding-right: 1rem;
+    h2 {
+      font-size: 2.875rem;
+      span {
+        font-size: var(--text-xlg);
+      }
+    }
+    strong {
+      font-size: var(--text-xxsm);
+    }
+    p {
+      font-size: var(--text-xxsm);
+    }
+  }
+  @media screen and (max-width: 414px) {
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 1rem;
+    h2 {
+      font-size: 2.5rem;
+      span {
+        font-size: var(--text-lg);
+        margin-left: 0.625rem;
+      }
+    }
   }
 `;
 
 const StyledMainImage = styled.div`
-  position: absolute;
-  width: 400px;
-  height: 400px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 25rem;
+  height: 25rem;
   background-color: #191919;
   overflow: hidden;
-  top: 172px;
-  right: 72px;
+  margin-top: 10.75rem;
+  margin-left: 4rem;
+  text-align: center;
   img {
     vertical-align: middle;
+  }
+  @media screen and (max-width: 1280px) {
+    width: 22rem;
+    height: 22rem;
+    margin-top: 8rem;
+    margin-left: 4rem;
+  }
+  @media screen and (max-width: 968px) {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 6rem;
+    margin-left: 4rem;
+  }
+  @media screen and (max-width: 768px) {
+    order: -1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    width: 24rem;
+  }
+  @media screen and (max-width: 540px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 414px) {
+    width: 80%;
+    height: 15.625rem;
+    margin-top: 1.75rem;
   }
 `;
 
@@ -175,6 +292,19 @@ const StyledSnsList = styled.ul`
       opacity: 1;
     }
   }
+  @media screen and (max-width: 1280px) {
+    top: 12rem;
+    left: 1.5rem;
+  }
+  @media screen and (max-width: 968px) {
+    top: 10rem;
+  }
+  @media screen and (max-width: 540px) {
+    top: 32rem;
+  }
+  @media screen and (max-width: 414px) {
+    top: 24rem;
+  }
 `;
 
 const StyledScrollDown = styled.div`
@@ -189,5 +319,21 @@ const StyledScrollDown = styled.div`
     font-size: var(--text-md);
     letter-spacing: 0.1875rem;
     color: var(--dark);
+  }
+  @media screen and (max-width: 1280px) {
+    top: 38rem;
+    .text {
+      font-size: var(--text-sm);
+    }
+  }
+  @media screen and (max-width: 968px) {
+    bottom: 14rem;
+    left: 8.5rem;
+    .text {
+      font-size: var(--text-sm);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;

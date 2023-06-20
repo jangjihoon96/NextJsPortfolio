@@ -79,6 +79,7 @@ const StyledCurriculum = styled.div`
     max-width: 13.25rem;
     min-height: 7rem;
     strong {
+      line-height: 1.4;
       font-weight: 500;
       font-size: var(--text-md);
       color: var(--dark);
@@ -101,6 +102,51 @@ const StyledCurriculum = styled.div`
   }
   li:nth-child(even) {
     left: 18.75rem;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    ul {
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    li {
+      max-width: 10.25rem;
+      strong {
+        font-size: var(--text-sm);
+      }
+      span {
+        font-size: var(--text-xxsm);
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    ul {
+      max-width: 25rem;
+    }
+    li {
+      max-width: 8rem;
+    }
+    li:nth-child(odd) {
+      left: 2rem;
+    }
+    li:nth-child(even) {
+      left: 14rem;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    ul {
+      max-width: 25rem;
+    }
+    li {
+      max-width: 8rem;
+    }
+    li:nth-child(odd) {
+      left: 2rem;
+    }
+    li:nth-child(even) {
+      left: 12.5rem;
+    }
   }
 `;
 

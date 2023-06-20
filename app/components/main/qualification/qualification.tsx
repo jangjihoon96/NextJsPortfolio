@@ -22,7 +22,6 @@ export default function Qualification() {
 }
 
 const StyledQualificationContents = styled.div`
-  /* background-color: red; */
   h3 {
     font-weight: 600;
     font-size: var(--text-lg);
@@ -30,6 +29,15 @@ const StyledQualificationContents = styled.div`
     color: var(--dark);
     .icon {
       margin-right: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+  }
+  @media screen and (max-width: 540px) {
+    h3 {
+      font-size: var(--text-md);
     }
   }
 `;

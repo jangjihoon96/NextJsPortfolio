@@ -19,19 +19,27 @@ export default function ScrollAni() {
 const StyledScrollAni = styled.span`
   position: relative;
   display: inline-block;
-  width: 24px;
-  height: 38px;
+  width: 1.5rem;
+  height: 2.375rem;
   border: 3px solid var(--dark);
-  border-radius: 14px;
+  border-radius: 0.875rem;
+  @media screen and (max-width: 1280px) {
+    width: 1.25rem;
+    height: 2rem;
+  }
 `;
 
 const StyledWheel = styled.span`
   width: 2px;
-  height: 12px;
+  height: 0.75rem;
   background-color: var(--dark);
   position: absolute;
-  top: 8px;
+  top: 0.5rem;
   left: 50%;
   transform: translate(-50%, 0);
   border-radius: 1px;
+  @media screen and (max-width: 1280px) {
+    height: 0.5rem;
+    top: 0.375rem;
+  }
 `;

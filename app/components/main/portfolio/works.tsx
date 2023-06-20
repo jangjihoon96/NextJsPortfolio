@@ -85,6 +85,7 @@ const WorksContainer = styled.ul`
   li {
     box-sizing: border-box;
     max-width: 31.25rem;
+    margin-top: 0.75rem;
     padding: 1.875rem;
     background-color: var(--white);
     border: 1px solid var(--lightgray);
@@ -102,6 +103,7 @@ const WorksContainer = styled.ul`
     p {
       margin-top: 0.5rem;
       margin-bottom: 1.25rem;
+      line-height: 1.5;
       font-size: var(--text-xxsm);
       font-weight: 400;
       color: var(--gray);
@@ -142,6 +144,27 @@ const WorksContainer = styled.ul`
     }
     .toy {
       background-color: rgb(33, 171, 65);
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    padding: 0 1.5rem;
+    gap: 1.2rem;
+    li {
+      max-width: 28rem;
+    }
+  }
+  @media screen and (max-width: 968px) {
+    padding: 0 1.5rem;
+    gap: 1.2rem;
+    li {
+      width: calc(100% / 2 - 1.2rem);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 1.5rem;
+    gap: 1.2rem;
+    li {
+      width: 100%;
     }
   }
 `;

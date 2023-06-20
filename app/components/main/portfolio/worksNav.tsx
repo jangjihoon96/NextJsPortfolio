@@ -54,4 +54,24 @@ const WorksNavContainer = styled.ul`
       }
     }
   }
+  @media screen and (max-width: 540px) {
+    li {
+      button {
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.5rem;
+        font-size: var(--text-sm);
+      }
+    }
+  }
+  @media screen and (max-width: 414px) {
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    li {
+      button {
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.5rem;
+        font-size: var(--text-sm);
+      }
+    }
+  }
 `;

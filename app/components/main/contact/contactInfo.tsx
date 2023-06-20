@@ -101,4 +101,29 @@ const StyledContactInfoContents = styled.div`
       margin-top: 1.5rem;
     }
   }
+  @media screen and (max-width: 1280px) {
+    ul {
+      li {
+        padding: 2.8rem 0.75rem;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1.5rem;
+      li + li {
+        margin-top: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    ul {
+      flex-flow: column nowrap;
+      li {
+        width: 100%;
+      }
+    }
+  }
 `;

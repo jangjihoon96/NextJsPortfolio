@@ -11,4 +11,8 @@ const StyledDescription = styled.p`
   font-weight: 400;
   color: var(--gray);
   text-align: center;
+  @media screen and (max-width: 540px) {
+    font-size: var(--text-sm);
+    margin-bottom: 3rem;
+  }
 `;

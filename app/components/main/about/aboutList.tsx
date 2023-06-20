@@ -33,14 +33,14 @@ export default function AboutList() {
 const StyledList = styled.ul`
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.625rem;
   li {
     width: calc(100% / 3);
     border: 1px solid var(--lightgray);
     box-sizing: border-box;
     background-color: var(--white);
     border-radius: 1rem;
-    padding: 30px 0;
+    padding: 1.875rem 0;
     span {
       display: block;
       color: var(--dark);
@@ -48,11 +48,19 @@ const StyledList = styled.ul`
     }
     .title {
       font-size: var(--text-md);
-      padding: 16px 0;
+      padding: 1rem 0;
     }
     .desc {
       font-size: var(--text-xxsm);
       color: var(--gray);
+    }
+  }
+  @media screen and (max-width: 968px) {
+    li {
+      padding: 1.5rem 0;
+      .title {
+        font-size: var(--text-xsm);
+      }
     }
   }
 `;
