@@ -125,10 +125,11 @@ const StyledMain = styled.main`
   }
   @media screen and (max-width: 540px) {
     padding-bottom: 0;
-    margin-bottom: 200px;
+    margin-bottom: 12.5rem;
   }
   @media screen and (max-width: 414px) {
     height: 100vh;
+    max-height: 41.6875rem;
   }
 `;
 const StyledMainText = styled.div`
