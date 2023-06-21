@@ -60,4 +60,19 @@ const StyledScrollTopButton = styled.button`
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+  @media screen and (max-width: 768px) {
+    right: 3rem;
+    bottom: 3rem;
+  }
+  @media screen and (max-width: 540px) {
+    right: 2rem;
+    bottom: 2rem;
+  }
+  @media screen and (max-width: 414px) {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: var(--text-xxsm);
+  }
 `;
