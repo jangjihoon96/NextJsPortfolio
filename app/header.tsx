@@ -1,116 +1,190 @@
 "use client";
-import { useEffect } from "react";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function Header() {
+  const [toggle, setToggle] = useState(false);
   useEffect(() => {
-    const home = document.getElementById("home")?.offsetTop;
-    const about = document.getElementById("about")?.offsetTop;
-    const skills = document.getElementById("skills")?.offsetTop;
-    const qualification = document.getElementById("qualification")?.offsetTop;
-    const portfolio = document.getElementById("portfolio")?.offsetTop;
-    const contact = document.getElementById("contact")?.offsetTop;
-    const moveHome = document.querySelector(".moveHome");
-    const moveAbout = document.querySelector(".moveAbout");
-    const moveSkills = document.querySelector(".moveSkills");
-    const moveQualification = document.querySelector(".moveQualification");
-    const movePortfolio = document.querySelector(".movePortfolio");
-    const moveContact = document.querySelector(".moveContact");
-    const homeScroll = () => {
-      if (home) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    const hamBar = document.querySelector(".ham-bar");
+    const mobileGnb = document.querySelector(".mobile-gnb") as HTMLElement;
+    const menuOpen = () => {
+      if (!toggle) {
+        mobileGnb.style.right = "0rem";
+        setToggle(true);
+      } else if (toggle) {
+        mobileGnb.style.right = "-8.75rem";
+        setToggle(false);
       }
     };
-    const aboutScroll = () => {
-      if (about) {
-        window.scrollTo({ top: about - 200, behavior: "smooth" });
-      }
+    hamBar?.addEventListener("click", menuOpen);
+    return () => {
+      hamBar?.removeEventListener("click", menuOpen);
     };
-    const skillsScroll = () => {
-      if (skills) {
-        window.scrollTo({ top: skills - 200, behavior: "smooth" });
-      }
+  }, [toggle]);
+  useEffect(() => {
+    const handleResize = () => {
+      const home = document.getElementById("home")?.offsetTop;
+      const about = document.getElementById("about")?.offsetTop;
+      const skills = document.getElementById("skills")?.offsetTop;
+      const qualification = document.getElementById("qualification")?.offsetTop;
+      const portfolio = document.getElementById("portfolio")?.offsetTop;
+      const contact = document.getElementById("contact")?.offsetTop;
+      const moveHome = document.querySelectorAll(".moveHome");
+      const moveAbout = document.querySelectorAll(".moveAbout");
+      const moveSkills = document.querySelectorAll(".moveSkills");
+      const moveQualification = document.querySelectorAll(".moveQualification");
+      const movePortfolio = document.querySelectorAll(".movePortfolio");
+      const moveContact = document.querySelectorAll(".moveContact");
+      const homeScroll = () => {
+        if (home) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      };
+      const aboutScroll = () => {
+        if (about) {
+          window.scrollTo({ top: about - 200, behavior: "smooth" });
+        }
+      };
+      const skillsScroll = () => {
+        if (skills) {
+          window.scrollTo({ top: skills - 200, behavior: "smooth" });
+        }
+      };
+      const qualificationScroll = () => {
+        if (qualification) {
+          window.scrollTo({ top: qualification - 200, behavior: "smooth" });
+        }
+      };
+      const portfolioScroll = () => {
+        if (portfolio) {
+          window.scrollTo({ top: portfolio - 200, behavior: "smooth" });
+        }
+      };
+      const contactScroll = () => {
+        if (contact) {
+          window.scrollTo({ top: contact - 200, behavior: "smooth" });
+        }
+      };
+      moveHome.forEach((link) => {
+        link?.addEventListener("click", (e) => {
+          e.preventDefault();
+          homeScroll();
+        });
+      });
+      moveAbout.forEach((link) => {
+        link?.addEventListener("click", (e) => {
+          e.preventDefault();
+          aboutScroll();
+        });
+      });
+      moveSkills.forEach((link) => {
+        link?.addEventListener("click", (e) => {
+          e.preventDefault();
+          skillsScroll();
+        });
+      });
+      moveQualification.forEach((link) => {
+        link?.addEventListener("click", (e) => {
+          e.preventDefault();
+          qualificationScroll();
+        });
+      });
+      movePortfolio.forEach((link) => {
+        link?.addEventListener("click", (e) => {
+          e.preventDefault();
+          portfolioScroll();
+        });
+      });
+      moveContact.forEach((link) => {
+        link?.addEventListener("click", (e) => {
+          e.preventDefault();
+          contactScroll();
+        });
+      });
     };
-    const qualificationScroll = () => {
-      if (qualification) {
-        window.scrollTo({ top: qualification - 200, behavior: "smooth" });
-      }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
-    const portfolioScroll = () => {
-      if (portfolio) {
-        window.scrollTo({ top: portfolio - 200, behavior: "smooth" });
-      }
-    };
-    const contactScroll = () => {
-      if (contact) {
-        window.scrollTo({ top: contact - 200, behavior: "smooth" });
-      }
-    };
-    moveHome?.addEventListener("click", (e) => {
-      e.preventDefault();
-      homeScroll();
-    });
-    moveAbout?.addEventListener("click", (e) => {
-      e.preventDefault();
-      aboutScroll();
-    });
-    moveSkills?.addEventListener("click", (e) => {
-      e.preventDefault();
-      skillsScroll();
-    });
-    moveQualification?.addEventListener("click", (e) => {
-      e.preventDefault();
-      qualificationScroll();
-    });
-    movePortfolio?.addEventListener("click", (e) => {
-      e.preventDefault();
-      portfolioScroll();
-    });
-    moveContact?.addEventListener("click", (e) => {
-      e.preventDefault();
-      contactScroll();
-    });
   }, []);
 
   return (
     <StyledHeader>
       <div className="inner">
         <h1>
-          <a href="#">Jihoon 🐾</a>
+          <a href="/">Jihoon 🐾</a>
         </h1>
         <ul className="gnb">
           <li>
-            <a href="#" className="moveHome">
+            <a href="/" className="moveHome">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="moveAbout">
+            <a href="/" className="moveAbout">
               About
             </a>
           </li>
           <li>
-            <a href="#" className="moveSkills">
+            <a href="/" className="moveSkills">
               Skills
             </a>
           </li>
           <li>
-            <a href="#" className="moveQualification">
+            <a href="/" className="moveQualification">
               Qualification
             </a>
           </li>
           <li>
-            <a href="#" className="movePortfolio">
+            <a href="/" className="movePortfolio">
               Portfolio
             </a>
           </li>
           <li>
-            <a href="#" className="moveContact">
+            <a href="/" className="moveContact">
               Contact
             </a>
           </li>
         </ul>
       </div>
+      <button type="button" className="ham-bar">
+        <FontAwesomeIcon icon={faBars} />
+      </button>
+      <ul className="mobile-gnb">
+        <li>
+          <a href="/" className="moveHome">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/" className="moveAbout">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/" className="moveSkills">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="/" className="moveQualification">
+            Qualification
+          </a>
+        </li>
+        <li>
+          <a href="/" className="movePortfolio">
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="/" className="moveContact">
+            Contact
+          </a>
+        </li>
+      </ul>
     </StyledHeader>
   );
 }
@@ -146,5 +220,75 @@ const StyledHeader = styled.header`
   }
   ul.gnb a:hover {
     color: #191919;
+  }
+  button.ham-bar {
+    display: none;
+  }
+  ul.mobile-gnb {
+    display: none;
+  }
+  @media screen and (max-width: 1280px) {
+    .inner {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+  }
+  @media screen and (max-width: 968px) {
+    ul.gnb li {
+      padding-left: 1.875rem;
+    }
+    ul.gnb a {
+      font-size: var(--text-xsm);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    height: 3.75rem;
+    .inner {
+      height: 100%;
+    }
+    ul.gnb {
+      display: none;
+    }
+    button.ham-bar {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      transform: translate(0, -50%);
+      border: none;
+      background-color: transparent;
+      padding: 0.25rem;
+      color: var(--dark);
+      font-size: var(--text-xsm);
+      cursor: pointer;
+    }
+    ul.mobile-gnb {
+      position: absolute;
+      top: 3.75rem;
+      right: -8.75rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: start;
+      background-color: var(--bgColor);
+      align-items: flex-end;
+      width: 8.75rem;
+      height: calc(100vh - 3.75rem);
+      box-sizing: border-box;
+      padding: 0 1.25rem;
+      border-left: 1px solid var(--lightgray);
+      transition: all 0.3s ease-in-out;
+    }
+    ul.mobile-gnb li {
+      width: 100%;
+      padding: 0.625rem 0;
+    }
+    ul.mobile-gnb li a {
+      display: block;
+      font-size: var(--text-xsm);
+      color: var(--dark);
+      padding: 0.25rem 0;
+      text-align: right;
+    }
   }
 `;
