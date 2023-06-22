@@ -7,8 +7,18 @@ export default function ContactInput({
   htmlfor,
   name,
   placeholder,
+  value,
+  setValue,
 }: {
-  [key: string]: string;
+  // [key: string]: string;
+  labelTitle: string;
+  type: string;
+  id: string;
+  htmlfor: string;
+  name: string;
+  placeholder: string;
+  value: string;
+  setValue: (e: string) => void;
 }) {
   if (type === "textarea") {
     return (
@@ -20,6 +30,8 @@ export default function ContactInput({
           placeholder={placeholder}
           cols={30}
           rows={7}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
       </StyledContactInputWrap>
     );
@@ -27,7 +39,14 @@ export default function ContactInput({
     return (
       <StyledContactInputWrap className="inputWrap">
         <label htmlFor={htmlfor}>{labelTitle}</label>
-        <input type={type} id={id} name={name} placeholder={placeholder} />
+        <input
+          type={type}
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
       </StyledContactInputWrap>
     );
   }
