@@ -95,7 +95,19 @@ const StyledSkillsContents = styled.div`
       width: auto;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 540px) {
+    strong {
+      font-size: var(--text-sm);
+    }
+    span {
+      margin-top: 0.5rem;
+      font-size: var(--text-xxxsm);
+    }
+    .icon {
+      font-size: var(--text-xsm);
+    }
+  }
+  @media screen and (max-width: 414px) {
     ul {
       justify-content: space-between;
     }

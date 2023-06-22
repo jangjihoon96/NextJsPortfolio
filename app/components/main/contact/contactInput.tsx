@@ -70,11 +70,11 @@ const StyledContactInputWrap = styled.div`
   input {
     box-sizing: border-box;
     width: 100%;
-    padding: 1rem;
+    padding: 1.25rem;
     background-color: var(--bgColor);
     border: 1px solid var(--gray);
     border-radius: 0.75rem;
-    font-size: var(--text-sm);
+    font-size: var(--text-xsm);
     color: var(--dark);
     &::placeholder {
       color: var(--gray);

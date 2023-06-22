@@ -44,7 +44,7 @@ const StyledContactInfo = styled.div`
     width: 21.25rem;
     flex-shrink: 0;
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 968px) {
     width: 16rem;
   }
   @media screen and (max-width: 768px) {
