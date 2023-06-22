@@ -5,14 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function ContactSendButton({
   type,
   children,
-  handleSendReset,
 }: {
   type: "submit" | "reset" | "button" | undefined;
   children: string;
-  handleSendReset: () => void;
 }) {
   return (
-    <StyledContactSendButton type={type} onClick={handleSendReset}>
+    <StyledContactSendButton type={type}>
       {children}
       <FontAwesomeIcon icon={faRocket} className="icon" />
     </StyledContactSendButton>
