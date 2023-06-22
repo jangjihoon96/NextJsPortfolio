@@ -10,14 +10,14 @@ export default function AboutList() {
           <FontAwesomeIcon icon={faPaw} className="icon" />
         </span>
         <span className="title">Experience</span>
-        <span className="desc">8 + Years</span>
+        <span className="desc">3 + Years</span>
       </li>
       <li>
         <span className="icon">
           <FontAwesomeIcon icon={faPaw} className="icon" />
         </span>
         <span className="title">Completed</span>
-        <span className="desc">8 + Projects</span>
+        <span className="desc">Various Projects</span>
       </li>
       <li>
         <span className="icon">
@@ -51,7 +51,7 @@ const StyledList = styled.ul`
       padding: 1rem 0;
     }
     .desc {
-      font-size: var(--text-xxsm);
+      font-size: var(--text-xxxsm);
       color: var(--gray);
     }
   }

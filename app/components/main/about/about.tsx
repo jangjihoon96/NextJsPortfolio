@@ -17,9 +17,10 @@ export default function About() {
         <StyledAboutContents>
           <AboutList />
           <p>
-            Frontend developer, I create web pages with UI / UX user interface,
-            I have years of experience and many clients are happy with the
-            projects carried out.
+            개발자가 되기 이전에 웹 퍼블리셔로 다양한 프로젝트 경험을
+            쌓았습니다. 이러한 경험은 팀원 간 소통 능력을 향상시키는 데에
+            기여했으며, 또한 사용자를 위한 UI 개발 능력을 향상시켜 좋은 개발자로
+            성장하는데 도움이 되었습니다.
           </p>
           <DownloadButton
             href="/downloads/resume_jihoon.pdf"
@@ -44,6 +45,9 @@ const StyledAboutContainer = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-flow: column nowrap;
+  }
+  @media screen and (max-width: 540px) {
+    gap: 0.75rem;
   }
 `;
 
@@ -74,6 +78,7 @@ const StyledAboutContents = styled.div`
   p {
     margin-top: 2rem;
     line-height: 1.5;
+    font-weight: 300;
     font-size: var(--text-md);
     color: var(--gray);
   }
@@ -97,9 +102,10 @@ const StyledAboutContents = styled.div`
     height: auto;
     gap: 2rem;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 540px) {
     p {
       font-size: var(--text-xsm);
     }
+    gap: 1.5rem;
   }
 `;

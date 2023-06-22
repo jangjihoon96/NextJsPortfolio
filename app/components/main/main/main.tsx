@@ -62,8 +62,9 @@ export default function Main() {
           <span>Frontend Developer</span>
         </strong>
         <p>
-          I&apos;m creative designer based in New York, and I&apos;m very
-          passionate and dedicated to my work
+          안녕하세요. 프론트엔드 개발자 장지훈입니다. 항상 사용자 중심적으로
+          생각하며, 직관적이고 효율적인 인터페이스를 구현하기 위해 노력하는
+          개발자입니다.
         </p>
         <BigButton>
           Say Hello <FontAwesomeIcon icon={faPaperPlane} className="icon" />
@@ -164,7 +165,7 @@ const StyledMainText = styled.div`
   p {
     margin-top: 1.5rem;
     font-weight: 300;
-    font-size: var(--text-lg);
+    font-size: var(--text-md);
     max-width: 33.75rem;
     line-height: 1.5;
     color: var(--gray);
