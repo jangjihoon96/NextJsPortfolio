@@ -1,35 +1,35 @@
+"use client";
 import styled from "styled-components";
 import Title from "../../text/title";
 import Description from "../../text/description";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+
+type SkillDataType = {
+  id: number;
+  name: string;
+  level: "Basic" | "Intermediate" | "Advanced";
+};
 
 export default function Skills() {
-  type SkillDataType = {
-    id: number;
-    name: string;
-    level: "Basic" | "Intermediate" | "Advanced";
-  };
-  const skillData: SkillDataType[] = [
-    { id: 1, name: "HTML", level: "Advanced" },
-    { id: 2, name: "CSS", level: "Intermediate" },
-    { id: 3, name: "Sass", level: "Basic" },
-    { id: 4, name: "JavaScript", level: "Intermediate" },
-    { id: 5, name: "React", level: "Intermediate" },
-    { id: 6, name: "TypeScript", level: "Basic" },
-    { id: 7, name: "Node.js", level: "Intermediate" },
-    { id: 8, name: "Next.js", level: "Basic" },
-    { id: 9, name: "GSAP", level: "Basic" },
-    { id: 10, name: "MongoDB", level: "Basic" },
-    { id: 11, name: "Firebase", level: "Basic" },
-  ];
+  const [skillData, setSkillData] = useState<SkillDataType[]>([]);
+  useEffect(() => {
+    fetch(`/api/skills/skillsList`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((result) => {
+        setSkillData(result);
+      });
+  }, []);
   return (
     <section id="skills">
       <Title>Skills</Title>
       <Description>My technical level</Description>
       <StyledSkillsContents>
         <ul>
-          {skillData.map((skill) => {
+          {skillData.map((skill, idx) => {
             return (
               <li key={skill.id}>
                 <FontAwesomeIcon icon={faCircleCheck} className="icon" />
