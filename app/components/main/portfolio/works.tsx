@@ -15,14 +15,16 @@ export default function Works({
         if (item.cartagorize == "team") {
           return (
             <li key={item.id}>
-              <Image
-                src={`/images/works/${item.img}`}
-                alt={item.alt}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto", objectFit: "cover" }}
-              />
+              <div className="img-box">
+                <Image
+                  src={`/images/works/${item.img}`}
+                  alt={item.alt}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                />
+              </div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
               {item.demo ? (
@@ -39,14 +41,16 @@ export default function Works({
         } else if (item.cartagorize == "individual") {
           return (
             <li key={item.id}>
-              <Image
-                src={`/images/works/${item.img}`}
-                alt={item.alt}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto", objectFit: "cover" }}
-              />
+              <div className="img-box">
+                <Image
+                  src={`/images/works/${item.img}`}
+                  alt={item.alt}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                />
+              </div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
               {item.demo ? (
@@ -63,14 +67,16 @@ export default function Works({
         } else {
           return (
             <li key={item.id}>
-              <Image
-                src={`/images/works/${item.img}`}
-                alt={item.alt}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto", objectFit: "cover" }}
-              />
+              <div className="img-box">
+                <Image
+                  src={`/images/works/${item.img}`}
+                  alt={item.alt}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                />
+              </div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
               {item.demo ? (
@@ -108,8 +114,14 @@ const WorksContainer = styled.ul`
     border: 1px solid var(--lightgray);
     border-radius: 1.875rem;
     height: auto;
-    img {
+    .img-box {
+      max-height: 15.875rem;
       border-radius: 1.5rem;
+      overflow: hidden;
+      text-align: center;
+    }
+    img {
+      vertical-align: middle;
     }
     h3 {
       margin-top: 1rem;
