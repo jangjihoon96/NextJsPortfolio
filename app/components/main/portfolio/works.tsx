@@ -12,7 +12,7 @@ export default function Works({
   return (
     <WorksContainer>
       {worksData.map((item) => {
-        if (item.demo == "") {
+        if (item.cartagorize == "team") {
           return (
             <li key={item.id}>
               <Image
@@ -25,17 +25,39 @@ export default function Works({
               />
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
+              {item.demo ? (
+                <a href={item.demo} target="_blank">
+                  <FontAwesomeIcon icon={faLink} className="icon" /> Demo
+                </a>
+              ) : null}
               <a href={item.github} target="_blank">
                 <FontAwesomeIcon icon={faLink} className="icon" /> Github
               </a>
-              {item.cartagorize == "team" ? (
-                <span className="filter team">Team</span>
-              ) : (
-                <span className="filter individual">Individual</span>
-              )}
-              {item.cartagorize == "toy" ? (
-                <span className="filter toy">Toy</span>
+              <span className="filter team">Team</span>
+            </li>
+          );
+        } else if (item.cartagorize == "individual") {
+          return (
+            <li key={item.id}>
+              <Image
+                src={`/images/works/${item.img}`}
+                alt={item.alt}
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "auto", objectFit: "cover" }}
+              />
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+              {item.demo ? (
+                <a href={item.demo} target="_blank">
+                  <FontAwesomeIcon icon={faLink} className="icon" /> Demo
+                </a>
               ) : null}
+              <a href={item.github} target="_blank">
+                <FontAwesomeIcon icon={faLink} className="icon" /> Github
+              </a>
+              <span className="filter individual">Individual</span>
             </li>
           );
         } else {
@@ -51,20 +73,15 @@ export default function Works({
               />
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
-              <a href={item.demo} target="_blank">
-                <FontAwesomeIcon icon={faLink} className="icon" /> Demo
-              </a>
+              {item.demo ? (
+                <a href={item.demo} target="_blank">
+                  <FontAwesomeIcon icon={faLink} className="icon" /> Demo
+                </a>
+              ) : null}
               <a href={item.github} target="_blank">
                 <FontAwesomeIcon icon={faLink} className="icon" /> Github
               </a>
-              {item.cartagorize == "team" ? (
-                <span className="filter team">Team</span>
-              ) : (
-                <span className="filter individual">Individual</span>
-              )}
-              {item.cartagorize == "toy" ? (
-                <span className="filter toy">Toy</span>
-              ) : null}
+              <span className="filter toy">Toy</span>
             </li>
           );
         }
