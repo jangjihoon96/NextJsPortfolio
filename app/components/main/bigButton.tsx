@@ -1,8 +1,14 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-export default function BigButton({ children }: { children: ReactNode }) {
-  return <StyledBigButton>{children}</StyledBigButton>;
+export default function BigButton({
+  className = "",
+  children,
+}: {
+  className: string;
+  children: ReactNode;
+}) {
+  return <StyledBigButton className={className}>{children}</StyledBigButton>;
 }
 
 const StyledBigButton = styled.button`

@@ -4,7 +4,7 @@ import ScrollAni from "./scrollAni";
 import BigButton from "../bigButton";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Power0, gsap } from "gsap";
 export default function Main() {
   const snsList = [
@@ -52,6 +52,28 @@ export default function Main() {
       },
     });
   }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      const about = document.getElementById("about")?.offsetTop;
+      const helloButton = document.querySelector(".helloButton");
+      const helloScroll = () => {
+        if (about) {
+          window.scrollTo({ top: about - 200, behavior: "smooth" });
+        }
+      };
+      if (helloButton) {
+        helloButton.addEventListener("click", (e) => {
+          e.preventDefault();
+          helloScroll();
+        });
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <StyledMain id="home">
       <StyledMainText>
@@ -66,7 +88,7 @@ export default function Main() {
           생각하며, 직관적이고 효율적인 인터페이스를 구현하기 위해 노력하는
           개발자입니다.
         </p>
-        <BigButton>
+        <BigButton className="helloButton">
           Say Hello <FontAwesomeIcon icon={faPaperPlane} className="icon" />
         </BigButton>
       </StyledMainText>
