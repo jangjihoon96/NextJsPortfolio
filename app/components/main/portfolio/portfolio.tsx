@@ -1,18 +1,27 @@
 "use client";
-import styled from "styled-components";
 import Title from "../../text/title";
 import Description from "../../text/description";
-import { portfolioData, portfolioFilter } from "./data";
+import { portfolioFilter, PortfolioDataType } from "./data";
 import Works from "./works";
 import WorksNav from "./worksNav";
 import { useEffect, useState } from "react";
-// 320 186 2560 1488
+
 export default function Portfolio() {
+  const [worksData, setWorksData] = useState<PortfolioDataType[]>([]);
+  useEffect(() => {
+    fetch("/api/works/worksList")
+      .then((res) => {
+        return res.json();
+      })
+      .then((result) => {
+        setWorksData(result);
+      });
+  }, []);
   const [activeFilter, setActiveFilter] = useState("all");
-  const filteredPortfolioData =
+  const filteredWorksData =
     activeFilter === "all"
-      ? portfolioData
-      : portfolioData.filter((item) => item.cartagorize === activeFilter);
+      ? worksData
+      : worksData.filter((item) => item.cartagorize === activeFilter);
 
   const handleFilterChange = (filterName: string) => {
     setActiveFilter(filterName);
@@ -26,7 +35,7 @@ export default function Portfolio() {
         activeFilter={activeFilter}
         onFilterChange={handleFilterChange}
       />
-      <Works portfolioData={filteredPortfolioData} />
+      <Works worksData={filteredWorksData} />
     </section>
   );
 }

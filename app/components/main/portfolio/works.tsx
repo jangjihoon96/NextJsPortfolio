@@ -5,13 +5,13 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Works({
-  portfolioData,
+  worksData,
 }: {
-  portfolioData: PortfolioDataType[];
+  worksData: PortfolioDataType[];
 }) {
   return (
     <WorksContainer>
-      {portfolioData.map((item) => {
+      {worksData.map((item) => {
         if (item.demo == "") {
           return (
             <li key={item.id}>
