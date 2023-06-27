@@ -5,6 +5,7 @@ export default function Add() {
   return (
     <StyledAddContainer>
       <form action="/api/works/addWorks" method="POST">
+        <input type="password" name="adminCode" placeholder="Admin Code" />
         <input type="text" name="id" placeholder="Id (ex. 1,2,3...)" />
         <input type="text" name="img" placeholder="Img src" />
         <input type="text" name="alt" placeholder="Img alt" />
