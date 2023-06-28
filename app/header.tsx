@@ -104,9 +104,13 @@ export default function Header() {
         });
       });
     };
-    handleResize();
+    let delayHandler = setTimeout(() => {
+      handleResize();
+    }, 2000);
+
     window.addEventListener("resize", handleResize);
     return () => {
+      clearTimeout(delayHandler);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
