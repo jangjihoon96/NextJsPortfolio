@@ -24,7 +24,7 @@ export default function Main() {
       id: 3,
       src: "icon-writing.png",
       alt: "이력서",
-      href: "https://www.notion.so/Design-Develop-f1f9c340de144a2ca9e2e90cd2b8ef27?pvs=4",
+      href: "https://www.notion.so/Next-js-Typescript-0986f193e0d74ec8ae0e18a77352e551?pvs=4",
     },
   ];
   useLayoutEffect(() => {
