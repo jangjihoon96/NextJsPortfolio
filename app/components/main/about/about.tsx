@@ -7,6 +7,7 @@ import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DownloadButton from "./downloadButton";
 import { MouseEventHandler } from "react";
+import Image from "next/image";
 
 export default function About() {
   const downloadButtonClickHandler = (e: any) => {
@@ -18,7 +19,16 @@ export default function About() {
       <Title>About Me</Title>
       <Description>My introduction</Description>
       <StyledAboutContainer>
-        <StyledAboutImage></StyledAboutImage>
+        <StyledAboutImage>
+          <Image
+            src="/images/profile/about_profile.jpg"
+            alt="프로필"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          ></Image>
+        </StyledAboutImage>
         <StyledAboutContents>
           <AboutList />
           <p>
@@ -61,6 +71,7 @@ const StyledAboutImage = styled.div`
   height: 27.5rem;
   background-color: #191919;
   border-radius: 30px;
+  overflow: hidden;
   @media screen and (max-width: 1280px) {
     width: 26.25rem;
     height: 26.25rem;
@@ -69,6 +80,11 @@ const StyledAboutImage = styled.div`
   @media screen and (max-width: 968px) {
     width: 22rem;
     height: 24rem;
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   @media screen and (max-width: 768px) {
     width: 100%;
