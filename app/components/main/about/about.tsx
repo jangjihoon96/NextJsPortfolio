@@ -6,8 +6,13 @@ import BigButton from "../bigButton";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DownloadButton from "./downloadButton";
+import { MouseEventHandler } from "react";
 
 export default function About() {
+  const downloadButtonClickHandler = (e: any) => {
+    e.preventDefault();
+    alert("관리자에게 문의해주세요.");
+  };
   return (
     <section id="about">
       <Title>About Me</Title>
@@ -23,8 +28,8 @@ export default function About() {
             성장하는데 도움이 되었습니다.
           </p>
           <DownloadButton
-            href="/downloads/resume_jihoon.pdf"
-            download="resume_jihoon_2023"
+            href="/"
+            downloadButtonClickHandler={downloadButtonClickHandler}
           >
             Download CV <FontAwesomeIcon icon={faPaperclip} className="icon" />
           </DownloadButton>

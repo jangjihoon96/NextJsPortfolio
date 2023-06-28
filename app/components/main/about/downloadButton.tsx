@@ -1,17 +1,19 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import styled from "styled-components";
 
 export default function DownloadButton({
   href,
-  download,
+  // download,
+  downloadButtonClickHandler,
   children,
 }: {
   href: string;
-  download: string;
+  // download: string;
+  downloadButtonClickHandler: (e: any) => void;
   children: ReactNode;
 }) {
   return (
-    <StyledDownloadButton href={href} download={download}>
+    <StyledDownloadButton href={href} onClick={downloadButtonClickHandler}>
       {children}
     </StyledDownloadButton>
   );
