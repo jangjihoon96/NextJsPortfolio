@@ -19,7 +19,7 @@ export default function ScrollTopButton() {
         }
       }
     };
-
+    handleScroll(); // 이걸 그냥 실행시켜도 문제없는가, 실행해야되는 이유 첫 로딩시 버튼이 보임
     const goToTopScroll = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
