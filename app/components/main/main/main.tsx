@@ -94,7 +94,7 @@ export default function Main() {
       </StyledMainText>
       <StyledMainImage id="animationProfile">
         <Image
-          src="/images/profile/main_profile.jpeg"
+          src="/images/profile/mainbig_profile.jpg"
           alt="프로필"
           width={0}
           height={0}
