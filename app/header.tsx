@@ -156,6 +156,7 @@ export default function Header() {
       </div>
       <button type="button" className="ham-bar">
         <FontAwesomeIcon icon={faBars} />
+        <span className="a11yHidden">메뉴바</span>
       </button>
       <ul className="mobile-gnb">
         <li>
