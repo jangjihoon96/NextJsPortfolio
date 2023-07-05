@@ -1,4 +1,5 @@
 import "./globals.css";
+import StyledComponentsRegistry from "@/lib/registry";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -27,9 +28,13 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <StyledComponentsRegistry>
+          <div>
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
