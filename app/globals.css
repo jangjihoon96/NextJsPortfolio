@@ -127,10 +127,8 @@ section {
 body {
   background-color: var(--bgColor);
   line-height: 1;
-  font-family: "Pretendard", sans-serif;
 }
 textarea {
-  font-family: "Pretendard", sans-serif;
   resize: none;
 }
 ol,
@@ -155,70 +153,6 @@ table {
 a {
   text-decoration: none;
   color: #333;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 100;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-Thin.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-ExtraLight.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 300;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-Light.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-Medium.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-SemiBold.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-Bold.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-ExtraBold.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-style: normal;
-  src: url("/fonts/pretendard/Pretendard-Black.ttf") format("truetype");
-  font-display: swap;
 }
 
 .a11yHidden {

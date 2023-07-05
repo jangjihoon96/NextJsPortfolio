@@ -1,5 +1,6 @@
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
+import localFont from "next/font/local";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -20,13 +21,39 @@ export const metadata = {
   ],
 };
 
+const pretendard = localFont({
+  src: [
+    {
+      path: "../public/fonts/pretendard/Pretendard-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/pretendard/Pretendard-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/pretendard/Pretendard-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/pretendard/Pretendard-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={pretendard.className}>
       <body>
         <StyledComponentsRegistry>
           <div>
