@@ -44,6 +44,7 @@ const WorksNavContainer = styled.ul`
       border: none;
       font-weight: 500;
       font-size: var(--text-md);
+      color: var(--dark);
       cursor: pointer;
       &:hover {
         background-color: #dcdcdc;
