@@ -3,6 +3,9 @@ import StyledComponentsRegistry from "@/lib/registry";
 import localFont from "next/font/local";
 import Header from "./header";
 import Footer from "./footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 export const metadata = {
   title: "Jihoon Jang Portfolio",
