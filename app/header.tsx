@@ -106,8 +106,8 @@ export default function Header() {
     };
     let delayHandler = setTimeout(() => {
       handleResize();
-    }, 2000);
-
+    }, 2500);
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       clearTimeout(delayHandler);
