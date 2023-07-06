@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import Title from "../../text/title";
 import Description from "../../text/description";

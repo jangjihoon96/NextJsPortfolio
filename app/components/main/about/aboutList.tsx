@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
