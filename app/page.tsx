@@ -1,5 +1,3 @@
-"use client";
-import styled from "styled-components";
 import Main from "./components/main/main/main";
 import About from "./components/main/about/about";
 import Skills from "./components/main/skills/skills";
@@ -7,12 +5,14 @@ import Portfolio from "./components/main/portfolio/portfolio";
 import Contact from "./components/main/contact/contact";
 import Qualification from "./components/main/qualification/qualification";
 import ScrollTopButton from "./components/button/scrollTopButton";
+import MainContainer from "./container/MainContainer";
+import MainContainerInner from "./container/mainContainerInner";
 
 export default function Home() {
   return (
     <>
-      <StyledContainer>
-        <StyledContainerInner>
+      <MainContainer>
+        <MainContainerInner>
           <Main />
           <About />
           <Skills />
@@ -20,17 +20,8 @@ export default function Home() {
           <Portfolio />
           <Contact />
           <ScrollTopButton />
-        </StyledContainerInner>
-      </StyledContainer>
+        </MainContainerInner>
+      </MainContainer>
     </>
   );
 }
-const StyledContainer = styled.div`
-  width: 100%;
-  margin-top: 4.375rem;
-`;
-const StyledContainerInner = styled.div`
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-`;
