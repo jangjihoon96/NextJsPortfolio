@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 export default function Description({ children }: { children: string }) {
