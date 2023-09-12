@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import styled from "styled-components";
 
 export default function BigButton({
@@ -9,6 +9,28 @@ export default function BigButton({
   className: string;
   children: ReactNode;
 }) {
+  useEffect(() => {
+    const handleResize = () => {
+      const about = document.getElementById("about")?.offsetTop;
+      const helloButton = document.querySelector(".helloButton");
+      const helloScroll = () => {
+        if (about) {
+          window.scrollTo({ top: about - 200, behavior: "smooth" });
+        }
+      };
+      if (helloButton) {
+        helloButton.addEventListener("click", (e) => {
+          e.preventDefault();
+          helloScroll();
+        });
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return <StyledBigButton className={className}>{children}</StyledBigButton>;
 }
 
