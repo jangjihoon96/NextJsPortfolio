@@ -18,6 +18,7 @@ export default function Home() {
           {/* @ts-expect-error Async Server Component */}
           <Skills />
           <Qualification />
+          {/* @ts-expect-error Async Server Component */}
           <Portfolio />
           <Contact />
           <ScrollTopButton />
