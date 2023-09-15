@@ -1,18 +1,18 @@
 "use client";
 import styled from "styled-components";
 import Image from "next/image";
-import { PortfolioDataType } from "./data";
+import { WorkDocumentType } from "./data";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Works({
-  worksData,
+  filteredWorksData,
 }: {
-  worksData: PortfolioDataType[];
+  filteredWorksData: WorkDocumentType[];
 }) {
   return (
     <WorksContainer>
-      {worksData.map((item) => {
+      {filteredWorksData.map((item) => {
         if (item.cartagorize == "team") {
           return (
             <li key={item.id}>

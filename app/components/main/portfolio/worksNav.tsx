@@ -1,14 +1,11 @@
 "use client";
 import styled from "styled-components";
-import { PortfolioFilterType } from "./data";
-import { useEffect, useState } from "react";
+import { portfolioFilter } from "./data";
 
 export default function WorksNav({
-  portfolioFilter,
   activeFilter,
   onFilterChange,
 }: {
-  portfolioFilter: PortfolioFilterType[];
   activeFilter: string;
   onFilterChange: (filterName: string) => void;
 }) {

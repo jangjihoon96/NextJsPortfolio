@@ -1,14 +1,3 @@
-export type PortfolioDataType = {
-  id: number;
-  img: string;
-  alt: string;
-  title: string;
-  desc: string;
-  github: string;
-  demo: string;
-  cartagorize: string;
-};
-
 export type PortfolioFilterType = { id: number; name: string };
 
 export const portfolioFilter: PortfolioFilterType[] = [
@@ -17,3 +6,15 @@ export const portfolioFilter: PortfolioFilterType[] = [
   { id: 3, name: "individual" },
   { id: 4, name: "toy" },
 ];
+
+export type WorkDocumentType = {
+  _id: string;
+  id: number;
+  img: string;
+  alt: string;
+  demo: undefined | null | string;
+  github: string;
+  title: string;
+  desc: string;
+  cartagorize: string;
+};
